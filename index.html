@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stel243diplôme.com - La preuve de vos compétences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a4b8c 0%, #2a7a9e 100%);
+        }
+        .diploma-card {
+            transition: transform 0.3s ease;
+        }
+        .diploma-card:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CTA bleu-blanc */
+        .cta-button {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            user-select: none;
+        }
+        .cta-button:hover {
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            box-shadow: 0 12px 20px rgba(96, 165, 250, 0.6);
+            transform: scale(1.05);
+        }
+        .cta-button:active {
+            transform: scale(0.95);
+        }
+        .cta-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Animation pulse glow */
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 15px 5px rgba(96, 165, 250, 1);
+            }
+        }
+        .pulse-glow {
+            animation: pulseGlow 2.5s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold">Stel243<span class="text-yellow-300">diplôme</span>.com</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="hover:text-yellow-300">Accueil</a>
+                    <a href="#services" class="hover:text-yellow-300">Services</a>
+                    <a href="#apropos" class="hover:text-yellow-300">À propos</a>
+                    <a href="#temoignages" class="hover:text-yellow-300">Témoignages</a>
+                    <a href="#galerie" class="hover:text-yellow-300">Galerie</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden py-4">
+                <a href="#accueil" class="block py-2 hover:text-yellow-300">Accueil</a>
+                <a href="#services" class="block py-2 hover:text-yellow-300">Services</a>
+                <a href="#apropos" class="block py-2 hover:text-yellow-300">À propos</a>
+                <a href="#temoignages" class="block py-2 hover:text-yellow-300">Témoignages</a>
+                <a href="#galerie" class="block py-2 hover:text-yellow-300">Galerie</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-5xl font-extrabold mb-6 leading-tight">
+                        Votre avenir, <span class="text-yellow-300">certifié</span>
+                    </h1>
+                    <p class="text-xl mb-8 max-w-lg">
+                        Stel243 vous offre des services rapides et fiables pour l'obtention de vos attestations et diplômes,
+                        validant ainsi votre parcours et ouvrant de nouvelles portes professionnelles.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button
+                            onclick="window.location.href='#services'"
+                            class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg hover:shadow-xl"
+                        >
+                            Nos Services
+                        </button>
+                    </div>
+                    <div class="mt-8">
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview"
+                            class="cta-button pulse-glow mt-6 inline-block"
+                            title="Vérifier votre attestation maintenant !"
+                        >
+                            <i class="fas fa-check-circle"></i> Vérifier votre attestation maintenant !
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Diplôme"
+                        class="rounded-lg shadow-2xl w-full max-w-md"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center text-blue-900 mb-16">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service 1 -->
+                <div
+                    class="diploma-card bg-gray-100 rounded-lg overflow-hidden shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300"
+                >
+                    <div class="text-blue-900 mb-6">
+                        <i class="fas fa-file-certificate text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Attestations EXETAT</h3>
+                    <p class="text-gray-700 mb-6">
+                        Obtenez rapidement votre attestation de l'Examen d'État en format PDF avec une simple procédure en
+                        ligne.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview" class="cta-button pulse-glow w-full justify-center text-center">
+                        <i class="fas fa-arrow-right"></i> Vérifier votre attestation maintenant !
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="diploma-card bg-gray-100 rounded-lg overflow-hidden shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300"
+                >
+                    <div class="text-blue-900 mb-6">
+                        <i class="fas fa-shield-alt text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Conservation sécurisée</h3>
+                    <p class="text-gray-700 mb-6">
+                        Nous conservons vos documents de manière sécurisée pour un accès à vie, où que vous soyez.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview" class="cta-button pulse-glow w-full justify-center text-center">
+                        <i class="fas fa-arrow-right"></i> Vérifier votre attestation maintenant !
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="diploma-card bg-gray-100 rounded-lg overflow-hidden shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300"
+                >
+                    <div class="text-blue-900 mb-6">
+                        <i class="fas fa-headset text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Support client</h3>
+                    <p class="text-gray-700 mb-6">
+                        Notre équipe est disponible pour vous accompagner dans toutes vos démarches et répondre à vos
+                        questions.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview" class="cta-button pulse-glow w-full justify-center text-center">
+                        <i class="fas fa-arrow-right"></i> Vérifier votre attestation maintenant !
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Équipe Stel243"
+                        class="rounded-lg shadow-xl w-full"
+                    />
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-4xl font-extrabold text-blue-900 mb-6">À propos de Stel243</h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Dans un monde où la reconnaissance des compétences est essentielle, Stel243 se positionne comme votre
+                        allié privilégié pour la validation de vos acquis.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Notre plateforme est dédiée à vous fournir des services rapides et fiables pour l'obtention de vos
+                        attestations et diplômes. Que vous soyez étudiant, professionnel en reconversion, ou que vous ayez
+                        simplement besoin de prouver une formation suivie, Stel243 simplifie vos démarches administratives.
+                    </p>
+                    <div class="bg-blue-100 border-l-8 border-blue-900 p-6 mb-6 italic text-blue-900 rounded-lg shadow-md">
+                        "Nous comprenons l'importance de disposer de documents officiels pour attester de votre savoir-faire et
+                        de votre parcours. C'est pourquoi nous nous engageons à vous offrir une solution efficace et sécurisée."
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview" class="cta-button pulse-glow inline-block" title="Vérifier votre attestation maintenant !">
+                            <i class="fas fa-check-circle"></i> Vérifier votre attestation maintenant !
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center text-blue-900 mb-16">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold text-2xl"
+                        >
+                            JD
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-blue-900 text-xl">Jean D.</h4>
+                            <p class="text-gray-600 text-sm">Étudiant, Kinshasa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">
+                        "Grâce à Stel243, j'ai pu obtenir mon attestation EXETAT en moins de 24h alors que je devais compléter
+                        un dossier urgent. Service rapide et professionnel!"
+                    </p>
+                    <div class="flex mt-6 space-x-1 text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold text-2xl"
+                        >
+                            MB
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-blue-900 text-xl">Marie B.</h4>
+                            <p class="text-gray-600 text-sm">Professionnelle, Lubumbashi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">
+                        "J'avais perdu mon diplôme original et j'avais besoin d'une attestation pour un emploi. Stel243 m'a
+                        sauvé la mise avec un document officiel parfait."
+                    </p>
+                    <div class="flex mt-6 space-x-1 text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold text-2xl"
+                        >
+                            PK
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-blue-900 text-xl">Patrick K.</h4>
+                            <p class="text-gray-600 text-sm">Entrepreneur, Goma</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">
+                        "Service exceptionnel! J'ai pu obtenir les attestations de mes employés rapidement pour notre dossier
+                        de soumission. Je recommande vivement Stel243."
+                    </p>
+                    <div class="flex mt-6 space-x-1 text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH39fmb3FrzQDD7cnPAy762wyGCOOdNxjZi4KOizCh0eR3tg/viewform?usp=preview" class="cta-button pulse-glow inline-block text-lg" title="Vérifier votre attestation maintenant !">
+                    <i class="fas fa-check-circle"></i> Vérifier votre attestation maintenant !
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    
